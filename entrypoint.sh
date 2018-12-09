@@ -7,7 +7,7 @@ service nginx restart
 
 source /venv/bin/activate
 
-python manage.py makemigrations 2>&1 | tee logs/makemigrations.log
+python manage.py makemigrations api 2>&1 | tee logs/makemigrations.log
 python manage.py migrate 2>&1 | tee logs/migrate.log
 
 python manage.py shell <<EOF
